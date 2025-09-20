@@ -1,9 +1,8 @@
-document.getElementById("calcular").addEventListener("click", async () => {
+document.getElementById("calcular").addEventListener("click", async function calcular() {
   const peso = parseFloat(document.getElementById("peso").value);
   let altura = parseFloat(document.getElementById("altura").value);
   const resultadoEl = document.getElementById("resultado");
 
-  // validações simples
   if (isNaN(peso) || peso <= 0) {
     resultadoEl.textContent = "Formato inválido: informe o peso corretamente";
     resultadoEl.style.color = "crimson";
@@ -16,7 +15,7 @@ document.getElementById("calcular").addEventListener("click", async () => {
   }
 
   try {
-    const response = await fetch("/api/imc/calcular", {
+    const response = await fetch("/api/imc/calcular", {  // URL ajustada
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ peso: peso, altura: altura }),
@@ -28,7 +27,7 @@ document.getElementById("calcular").addEventListener("click", async () => {
 
     const data = await response.json();
     resultadoEl.style.color = "";
-    resultadoEl.innerHTML = `<strong>IMC: ${data.imc}</strong> — ${data.categoria}<br>${data.mensagem}`;
+    resultadoEl.innerHTML = `<strong>IMC: ${data.imc.toFixed(1)}</strong> — ${data.categoria}<br>${data.mensagem}`;
   } catch (error) {
     resultadoEl.textContent = "Ocorreu um erro ao calcular. Tente novamente.";
     resultadoEl.style.color = "crimson";
