@@ -1,15 +1,18 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f6f6f6;
+  background-color: #513535;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
 }
-
+strong {
+    font-family: 'Lemonada', sans-serif;
+    color: #322424;
+}
 .container {
-  background: #fff;
+  background: #F3F0F0;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -18,9 +21,12 @@ body {
 }
 
 h1 {
+  font-family: 'Jockey One', sans-serif;
   text-align: center;
-  color: #333;
+  color: #271B1B;
+  font-size: 900;
   margin-bottom: 1.5rem;
+  font-weight: 900;
 }
 
 .form-group {
@@ -54,16 +60,16 @@ button {
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 button#calcular {
-  background: #4caf50;
+  background: #563EA5;
   color: white;
 }
 
 button#calcular:hover {
-  background: #45a049;
+  background: #6344C8;
 }
 
 button#limpar {
@@ -78,7 +84,7 @@ button#limpar:hover {
   margin-top: 1.5rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333;
+  color: #FE48C2;
 }
 
 .aviso {

@@ -5,12 +5,12 @@ document.getElementById("calcular").addEventListener("click", async () => {
 
   // validações simples
   if (isNaN(peso) || peso <= 0) {
-    resultadoEl.textContent = "Formato inválido: informe o peso corretamente (em kg).";
+    resultadoEl.textContent = "Formato inválido: informe o peso corretamente";
     resultadoEl.style.color = "crimson";
     return;
   }
   if (isNaN(altura) || altura <= 0) {
-    resultadoEl.textContent = "Formato inválido: informe a altura corretamente (em metros ou cm).";
+    resultadoEl.textContent = "Formato inválido: informe a altura corretamente.";
     resultadoEl.style.color = "crimson";
     return;
   }

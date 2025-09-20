@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calculadora de IMC</title>
-  <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Lemonada:wght@300..700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <main class="container">
-    <h1>Calculadora de IMC</h1>
+    <main class="container">
+        <h1>Calculadora de IMC</h1>
 
-    <div class="form-group">
-      <label for="peso">Peso (kg):</label>
-      <input id="peso" type="number" step="0.1" placeholder="Ex: 70" />
-    </div>
+        <div class="form-group">
+            <label for="peso"><strong>Peso</strong> (kg):</label>
+            <input id="peso" type="number" step="0.1" placeholder="Ex: 70" />
+        </div>
 
-    <div class="form-group">
-      <label for="altura">Altura (m ou cm):</label>
-      <input id="altura" type="number" step="0.01" placeholder="Ex: 1.75 ou 175" />
-    </div>
+        <div class="form-group">
+            <label for="altura"><strong>Altura</strong> (m ou cm):</label>
+            <input id="altura" type="number" step="0.01" placeholder="Ex: 1.75 ou 175" />
+        </div>
 
-    <div class="buttons">
-      <button id="calcular">Calcular</button>
-      <button id="limpar">Limpar</button>
-    </div>
+        <div class="buttons">
+            <button id="calcular">Calcular</button>
+            <button id="limpar">Limpar</button>
+        </div>
 
-    <div id="resultado" class="resultado"></div>
-    <p class="aviso">⚠️ Resultado estimado — não substitui avaliação médica.</p>
-  </main>
+        <div id="resultado" class="resultado"></div>
+        <p class="aviso"> Resultado estimado — não substitui avaliação médica.</p>
+    </main>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
